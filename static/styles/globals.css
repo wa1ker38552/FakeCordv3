@@ -1,0 +1,18 @@
+:root {
+  --bg-dark: #1e1f22;
+  --bg: #2b2d31;
+  --bg-light: #313338;
+  --bg-accent: #232428;
+  --bg-shadow: #383a40;
+
+  --channel-selected: #404249;
+  --message-hover: #2E3035;
+
+  --text: #94969a;
+  --text-light: #a7aaad;
+  --text-ultra-light: #DBDEE1;
+
+  --error: #f23f42;
+  --mention: #3c4270;
+  --mention-text: #aeb3e1;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FakeCord | Channel</title>
+    <link rel="icon" href="/static/assets/fakecord.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira Code">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito Sans">
+    <link rel="stylesheet" href="/static/styles/globals.css">
+    <link rel="stylesheet" href="/static/styles/tags.css">
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script>var currentChannel = "{{id}}"</script>
+    <script src="/static/scripts/Fetch.js"></script>
+    <script src="/static/scripts/Config.js"></script>
+    <script src="/static/scripts/View.js"></script>
+    <script src="/static/scripts/Render.js"></script>
+    <script src="/static/scripts/ChannelLoad.js"></script>
+  </head>
+  <body>
+    <div id="sidePanel"></div>
+    <div class="content">
+      <div class="channel-banner centered-vertically">
+        <img id="channelIcon" src="/static/assets/fakecord.png">
+        <div id="channelName"></div>
+      </div>
+      <div id="messagesContainer"></div>
+      <input id="channelInput" style="margin: 0.5em" type="text" placeholder="Message" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="profile centered-vertically">
+      <img id="avatarImage" src="/static/assets/fakecord.png">
+      <div class="profile-text">
+        <div id="profileTitle" class="profile-global">...</div>
+        <div id="profileSubtitle" class="profile-username">...</div>
+      </div>
+    </div>
+    <div class="bottom">
+      <a class="guild home-icon" href="/"><img class="guild-icon" src="/static/assets/fakecord.png"></a>
+      <div id="bottomPanel"></div>
+    </div>
+  </body>
+</html>

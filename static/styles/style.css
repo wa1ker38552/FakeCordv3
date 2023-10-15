@@ -1,0 +1,340 @@
+#sidePanel {
+  width: 15em;
+  background: var(--bg-dark);
+  padding: 0.5em;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#sidePanel:hover {
+  overflow-y: scroll;
+}
+
+.content {
+  background: var(--bg-light);
+  background: var(--bg-light);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  width: calc(100vw - 15em);
+}
+
+.profile {
+  background: var(--bg-accent);
+}
+
+.bottom {
+  width: calc(100vw - 15em);
+  background: var(--bg);
+  padding: 0.5em 0 0 0.5em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#bottomPanel {
+  white-space: nowrap;
+}
+
+.bottom:hover {
+  overflow-x: scroll;
+}
+
+.guild {
+  display: inline-block;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+  margin: 0 0.5em 0 0em;
+}
+
+.guild-icon {
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.guild-icon:hover {
+  border-radius: 12px;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 0.5em;
+  color: #ffffff;
+  font-size: 0.8em;
+  width: auto;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.075),
+    0 2px 2px rgba(0, 0, 0, 0.075),
+    0 4px 4px rgba(0, 0, 0, 0.075),
+    0 8px 8px rgba(0, 0, 0, 0.075),
+    0 16px 16px rgba(0, 0, 0, 0.075);
+  ;
+  white-space: nowrap;
+  opacity: 0;
+  left: 3.5em;
+  top: 0;
+  z-index: 9998;
+  visibility: hidden;
+  transition: opacity ease-in-out 0.3s, visibility 0s linear 0.3s;
+}
+
+.guild-icon:hover ~ .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s; 
+}
+
+.guild-icon:hover ~ .tooltip:hover {
+  opacity: 0; 
+  visibility: hidden;
+}
+
+.guild-icon img {
+  border-radius: inherit;
+}
+
+.channel {
+  width: 100%;
+  overflow: hidden;
+  gap: 0.5em;
+  transition: 0.3s ease-in-out;
+  border-radius: 4px;
+  padding: 0.5em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.channel:hover {
+  background: var(--bg-light);
+}
+
+.channel img {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+
+.channel-name {
+  font-size: 1em;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.profile {
+  padding: 0.5em;
+  box-sizing: border-box;
+  gap: 1em;
+  width: 15em;
+}
+
+.profile img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+.profile-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.profile-global {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.profile-username {
+  font-size: 0.8em;
+  color: var(--text);
+}
+
+.channel-banner {
+  font-size: 1em;
+  box-shadow: var(--bg-dark) 0 0 5px;
+  padding: 0.5em;
+  box-sizing: border-box;
+  color: white;
+  gap: 1em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+#channelDescription {
+  color: var(--text);
+  font-weight: normal;
+}
+
+.channel-banner img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+.selected-channel {
+  background: var(--channel-selected);
+}
+
+#messagesContainer {
+  overflow: auto;
+  height: calc(100vh - 10em);
+}
+
+.message {
+  display: flex;
+  gap: 1em;
+  padding:  0.1em 0.5em 0.1em 0.5em;
+  box-sizing: border-box;
+}
+
+.message-author-avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+} 
+
+.message-author {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  line-height: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+.message-author span {
+  font-size: 0.7em;
+  color: var(--text);
+}
+
+.unsupported-message {
+  font-family: "Fira Code";
+  cursor: pointer;
+  color: var(--error);
+}
+
+.message-attachment {
+  width: 8em;
+  height: 8em;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.message-content {
+  font-size: 1em;
+  color: var(--text-light);
+  word-wrap: break-word;
+  width: calc(100vw - 19.5em)
+}
+
+.message:hover {
+  background: var(--message-hover);
+}
+
+.home-icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.home-icon img {
+  border-radius: 15px;
+}
+
+.home-icon img:hover {
+  border-radius: 12px;
+}
+
+#devLogs, .empty-channel {
+  height: calc(100vh - 2em - 4em);
+  padding: 0.5em;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.empty-channel {
+  height: calc(100vh - 2em - 5em);
+}
+
+.devlog {
+  width: 100%;
+  background: var(--message-hover);
+  border-radius: 6px;
+  font-family: "Fira Code";
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--bg);
+  margin-bottom: 0.5em;
+}
+
+.devlog ul {
+  margin: 0;
+}
+
+.devlog-version {
+  color: white;
+  font-size: 1em;
+}
+
+.minor {
+  font-size: 0.9em;
+  color: var(--text-light);
+}
+
+.patch {
+  color: var(--text);
+  font-size: 0.8em;
+}
+
+.channel-parent-name {
+  font-weight: bold;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.channel-parent-name:hover {
+  color: var(--text-ultra-light);
+}
+
+.guild-channel {
+  color: var(--text-light);
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  box-sizing: border-box;
+  margin-left: 1em;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 13em;
+}
+
+.guild-channel:hover {
+  background: var(--bg-light);
+}
+
+.message-mention {
+  background: var(--mention);
+  font-color: var(--mention-text);
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  border-radius: 4px;
+  border-width: 0;
+}

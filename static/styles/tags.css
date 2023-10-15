@@ -1,0 +1,81 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr;
+  font-family: "Nunito Sans";
+  overflow: hidden;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: "Nunito Sans";
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  outline: 0;
+  background: var(--bg-dark);
+  border-radius: 6px;
+  font-family: "Nunito Sans";
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-style: none;
+  background: var(--bg-shadow);
+}
+
+code {
+  background: var(--bg-dark);
+  font-family: "Fira Code";
+  border-radius: 2px;
+  padding: 0 0.2em 0 0.2em;
+  line-height: 1em;
+}
+
+p {
+  display: block;
+  background: var(--bg);
+  border-color: var(--bg-dark);
+  padding: 0.5em;
+  border-radius: 6px !important;
+  border-width: 2px !important;
+  font-family: "Fira Code";
+  margin: 0;
+}
+
+b {
+  color: white;
+}
+
+.centered-vertically {
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.35em;
+  height: 0.35em;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #171717;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d0d0d;
+}
